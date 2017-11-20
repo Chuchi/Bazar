@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Prime"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secoro"
+    tools:context="com.sincro.allup.Departamentos">
+
+
+    <Button
+        android:id="@+id/BTN201"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_corner2"
+        android:padding="8dp"
+        android:text="@string/Operaciones"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/BTN202"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/BTN201"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/rounded_corner2"
+        android:padding="6dp"
+        android:text="@string/Mantenimiento"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="25sp"
+        android:visibility="invisible"/>
+
+    <Button
+        android:id="@+id/BTN204"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_corner"
+        android:paddingBottom="3dp"
+        android:paddingEnd="7dp"
+        android:paddingStart="3dp"
+        android:paddingTop="4dp"
+        android:text="@string/Salir"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/IMV22"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/primoro"
+        android:visibility="visible"/>
+
+</RelativeLayout>
+

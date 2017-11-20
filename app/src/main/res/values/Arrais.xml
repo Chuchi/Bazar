@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string-array name="ColoresLineas">
+        <item>Roja</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Amarilla</item>
+        <item>Naranja</item>
+        <item>Blanca</item>
+        <item>Celeste</item>
+        <item>Morada</item>
+        <item>             </item>
+    </string-array>
+
+    <string-array name="Lineaxxx">
+
+        <item>Todas  </item>
+        <item>Roja</item>
+        <item>Verde</item>
+        <item>Azul</item>
+        <item>Amarilla</item>
+        <item>Naranja</item>
+        <item>Blanca</item>
+        <item>Celeste</item>
+        <item>Morada</item>
+
+</string-array>
+
+    <string-array name="Estadox">
+        <item>Todas  </item>
+        <item>Activas</item>
+        <item>Archivadas</item>
+    </string-array>
+
+    <string-array name="EstacionesRoja">
+    <item>Central</item>
+    <item>Cementerio</item>
+    <item>16 de Julio</item>
+</string-array>
+    <string-array name="EstacionesVerde">
+        <item>Irpavi</item>
+        <item>Obrajes 17</item>
+        <item>Alto Obrajes</item>
+        <item>Libertador</item>
+    </string-array>
+    <string-array name="EstacionesAzul">
+        <item>16 de Julio</item>
+        <item>Libertad</item>
+        <item>Plaza La Paz</item>
+        <item>Upea</item>
+        <item>Rio Seco</item>
+    </string-array>
+    <string-array name="EstacionesAmarilla">
+        <item>Libertador</item>
+        <item>Sopocachi</item>
+        <item>Buenos Aires</item>
+        <item>Mirador</item>
+    </string-array>
+    <string-array name="EstacionesNaranja">
+        <item>Central</item>
+        <item>Armentia</item>
+        <item>Periferica</item>
+        <item>Plaza Villaroel</item>
+    </string-array>
+    <string-array name="EstacionesBlanca">
+        <item>San Jorge</item>
+        <item>Plaza Triangular</item>
+        <item>Busch</item>
+        <item>Plaza Villaroel</item>
+    </string-array>
+    <string-array name="EstacionesCeleste">
+        <item>Libertador</item>
+        <item>San Jorge</item>
+        <item>Cancha Zapata</item>
+        <item>Prado</item>
+    </string-array>
+    <string-array name="EstacionesMorada">
+        <item>Av. 6 de Marzo</item>
+        <item>Faro Murillo</item>
+        <item>San Jose</item>
+        </string-array>
+    <string-array name="Secciones">
+        <item>Seccion I</item>
+        <item>Seccion II</item>
+        <item>             </item>
+    </string-array>
+
+    <string-array name="Areas">
+        <item>Remonte</item>
+        <item> Sala Motores Principales</item>
+        <item> Sala Operador</item>
+        <item>Torre</item>
+        <item>Sala Tablero Electrico</item>
+        <item> Sala Telecomunicaciones</item>
+        <item> Sala Variadores</item>
+        <item> Anden Embarque</item>
+        <item>Anden Desembarque</item>
+        <item>Oficinas Administrativas</item>
+        <item> Pasillo Administrativo</item>
+        <item>Pasillo Publico</item>
+        <item>Molinetes Ingreso</item>
+        <item>Molinetes Salida</item>
+        <item>Exteriores</item>
+        <item>Sala Bombas</item>
+        <item>Cajas</item>
+        <item>Iluminacion Exterior</item>
+        <item>         </item>
+
+    </string-array>
+
+    <string-array name="Areax">
+        <item>Todas</item>
+        <item>Remonte</item>
+        <item> Sala Motores Principales</item>
+        <item> Sala Operador</item>
+        <item>Torre</item>
+        <item>Sala Tablero Electrico</item>
+        <item> Sala Telecomunicaciones</item>
+        <item> Sala Variadores</item>
+        <item> Anden Embarque</item>
+        <item>Anden Desembarque</item>
+        <item>Oficinas Administrativas</item>
+        <item> Pasillo Administrativo</item>
+        <item>Pasillo Publico</item>
+        <item>Molinetes Ingreso</item>
+        <item>Molinetes Salida</item>
+        <item>Exteriores</item>
+        <item>Sala Bombas</item>
+        <item>Cajas</item>
+        <item>Iluminacion Exterior</item>
+        <item>         </item>
+
+    </string-array>
+    <string-array name="Nadita">
+        <item>         </item>
+    </string-array>
+
+</resources>

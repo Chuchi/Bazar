@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">T</string>
+    <string name="Usuar">UsAllUpuar</string>
+    <string name="Enviar">Enviar</string>
+    <string name="Cancelar">Cancelar</string>
+    <string name="Salir">Salir</string>
+    <string name="Linea">Linea</string>
+    <string name="Estacion">Estacion</string>
+    <string name="Area">Area</string>
+    <string name="Seccion">Seccion</string>
+    <string name="Observaciones">Observaciones</string>
+    <string name="Usuar1">Benedicto Aruni</string>
+    <string name="Usuar2">Ruben Apaza</string>
+    <string name="Usuar3">Guido Gracia</string>
+    <string name="Operaciones">Operaciones</string>
+    <string name="Mantenimiento">Mantenimiento</string>
+    <string name="Historico">Historico</string>
+    <string name="Reportar">Reportar</string>
+
+
+</resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Prime"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secoro"
+    tools:context="com.sincro.allup.MainActivity">
+
+
+    <Button
+        android:id="@+id/BTN101"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_corner2"
+        android:padding="8dp"
+        android:text="@string/Reportar"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/BTN102"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="false"
+        android:layout_below="@+id/BTN101"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corner2"
+        android:padding="6dp"
+        android:text="@string/Historico"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:visibility="visible"/>
+
+    <Button
+        android:id="@+id/BTN104"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_marginTop="60dp"
+        android:background="@drawable/rounded_corner"
+        android:padding="4dp"
+        android:paddingEnd="7dp"
+        android:text="@string/Salir"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        android:visibility="visible"/>
+
+</RelativeLayout>
+
+
+

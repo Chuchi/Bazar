@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/secoro"
+    tools:context="com.sincro.allup.Historicos">
+
+
+    <TextView
+        android:id="@+id/TXV40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="ARCHIVO"
+        android:textColor="@color/SuaveFondo"
+        android:textSize="45sp"
+        android:textStyle="bold"
+
+  />
+
+    <Spinner
+        android:id="@+id/SPNN40"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/TXV41"
+        android:layout_marginLeft="30dp"
+        android:layout_toRightOf="@+id/TXV41"
+        android:background="@android:color/transparent"/>
+
+    <Spinner
+        android:id="@+id/SPNN41"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SPNN40"
+        android:layout_alignTop="@+id/TXV42"
+        android:layout_toRightOf="@+id/TXV42"
+        android:background="@android:color/transparent"/>
+
+        />
+
+    <Spinner
+        android:id="@+id/SPNN42"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SPNN40"
+        android:layout_alignTop="@+id/TXV43"
+        android:layout_toRightOf="@+id/TXV43"
+        android:background="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/TXV41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TXV40"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:text="Linea"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="83dp"/>
+
+    <TextView
+        android:id="@+id/TXV42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TXV41"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:text="Area"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+
+        />
+
+    <TextView
+        android:id="@+id/TXV43"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TXV42"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:text="Estado"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+
+        />
+
+    <Button
+        android:id="@+id/BTN40"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SPNN42"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="@color/Negraco"
+        android:text="BUSCAR"
+        android:textColor="@android:color/white"
+/>
+
+    <ListView
+        android:id="@+id/LV40"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/BTN41"
+        android:layout_below="@+id/BTN40"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+
+        android:layout_marginRight="8dp"
+        android:background="@color/SuaveFondo"/>
+
+    <Button
+        android:id="@+id/BTN41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/BTN40"
+        android:layout_marginBottom="8dp"
+        android:background="@color/Amarillo"
+        android:text="SALIR"
+        android:textColor="@android:color/white"/>
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/LV40"
+        android:layout_alignStart="@+id/TXV40"
+        android:layout_marginStart="26dp" />
+</RelativeLayout>
