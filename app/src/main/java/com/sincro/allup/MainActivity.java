@@ -6,6 +6,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
@@ -14,7 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     Handler pop = new Handler();
 
-
+///// esto es una prueba de carga
+    ImageView BTTERM;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
