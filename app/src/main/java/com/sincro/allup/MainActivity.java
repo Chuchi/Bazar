@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener  {
 
@@ -14,6 +15,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button BTN101,BTN102,BTN104 ;
 
     Handler pop = new Handler();
+
+    TextView Adefesio;
 
 ///// esto es una prueba de carga
     ImageView BTTERM;
