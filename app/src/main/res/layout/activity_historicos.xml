@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -57,12 +56,12 @@
         android:id="@+id/TXV41"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/TXV40"
+        android:layout_below="@id/DP102"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="20dp"
         android:text="Linea"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="16sp"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="83dp"/>
 
@@ -75,7 +74,7 @@
         android:layout_marginTop="30dp"
         android:text="Area"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="16sp"
 
         />
 
@@ -88,7 +87,7 @@
         android:layout_marginTop="30dp"
         android:text="Estado"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="16sp"
 
         />
 
@@ -129,10 +128,9 @@
         android:textColor="@android:color/white"/>
 
     <DatePicker
-        android:id="@+id/datePicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/LV40"
-        android:layout_alignStart="@+id/TXV40"
-        android:layout_marginStart="26dp" />
+        android:id="@+id/DP102"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/TXV40"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
