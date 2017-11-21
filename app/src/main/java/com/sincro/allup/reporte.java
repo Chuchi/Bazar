@@ -23,7 +23,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -38,7 +37,6 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
     ImageButton BTNCAMERA1 , BTNCAMERA2, BTNCAMERA3 , BTNCAMERA4;
     ImageView BeloAzul;
     ProgressBar progress;
-    LinearLayout papas;
     Spinner SPNN11, SPNN12,SPNN13, SPNN14;
     ArrayAdapter<String> Colores, Estaciones, Secciones , Areas, Nada;
     Intent pez;
