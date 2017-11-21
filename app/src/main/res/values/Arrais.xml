@@ -9,6 +9,9 @@
         <item>Blanca</item>
         <item>Celeste</item>
         <item>Morada</item>
+        <item>Plateada</item>
+        <item>Dorada</item>
+        <item>Cafe</item>
         <item>             </item>
     </string-array>
 
@@ -23,6 +26,9 @@
         <item>Blanca</item>
         <item>Celeste</item>
         <item>Morada</item>
+        <item>Plateada</item>
+        <item>Dorada</item>
+        <item>Cafe</item>
 
 </string-array>
 
@@ -79,6 +85,21 @@
         <item>Faro Murillo</item>
         <item>San Jose</item>
         </string-array>
+    <string-array name="EstacionesPlateada">
+        <item>16 de Julio</item>
+        <item>Faro Murillo</item>
+        <item>Mirador</item>
+    </string-array>
+    <string-array name="EstacionesDorada">
+        <item>Irpavi</item>
+        <item>Achumani</item>
+        <item>Umsa</item>
+    </string-array>
+    <string-array name="EstacionesCafe">
+        <item>Busch</item>
+        <item>Las Villas</item>
+
+    </string-array>
     <string-array name="Secciones">
         <item>Seccion I</item>
         <item>Seccion II</item>

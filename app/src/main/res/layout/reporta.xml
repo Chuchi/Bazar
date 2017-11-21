@@ -329,10 +329,10 @@
         android:id="@+id/BeloAzul"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:elevation="5dp"
         android:visibility="invisible"
-        app:srcCompat="@color/beloAzul"/>
+        app:srcCompat="@color/beloAzul" />
 
 </RelativeLayout>

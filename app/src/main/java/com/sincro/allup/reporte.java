@@ -40,7 +40,10 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
     Spinner SPNN11, SPNN12,SPNN13, SPNN14;
     ArrayAdapter<String> Colores, Estaciones, Secciones , Areas, Nada;
     Intent pez;
-    int consta =0;
+    int Toma1 =258;
+    int Toma2=365;
+    int Arch1 =33;
+    int Arch2=35;
     Bitmap bmppp;
     SharedPreferences ansiadas;
     private Handler carlo = new Handler();
@@ -109,7 +112,7 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
         SPNN14.setAdapter(Areas);
 
         SPNN12.setAdapter(Nada);
-        SPNN11.setSelection(8);
+        SPNN11.setSelection(11);
         SPNN13.setSelection(2);
         SPNN14.setSelection(18);
 
@@ -201,11 +204,40 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
                         SPNN12.setAdapter(Estaciones);
                         TXV13.setTextColor(getResources().getColor(R.color.Morado));
 
+
                     break;
                     case 8:
+                        Estaciones = new ArrayAdapter<String>(this,R.layout.stilotexto,getResources().getStringArray(R.array.EstacionesPlateada));
+                        //SPNN12.setVisibility(View.VISIBLE);
+                        SPNN12.setAdapter(Estaciones);
+                        TXV13.setTextColor(Color.WHITE);
 
-                    break;
 
+                        break;
+
+                    case 9:
+                        Estaciones = new ArrayAdapter<String>(this,R.layout.stilotexto,getResources().getStringArray(R.array.EstacionesDorada));
+                        //SPNN12.setVisibility(View.VISIBLE);
+                        SPNN12.setAdapter(Estaciones);
+                        TXV13.setTextColor(Color.WHITE);
+
+
+                        break;
+
+                    case 10:
+                        Estaciones = new ArrayAdapter<String>(this,R.layout.stilotexto,getResources().getStringArray(R.array.EstacionesCafe));
+                        //SPNN12.setVisibility(View.VISIBLE);
+                        SPNN12.setAdapter(Estaciones);
+                        TXV13.setTextColor(Color.WHITE);
+
+
+                        break;
+
+                    case 11:
+
+
+
+                        break;
                 }
                 break;
         }
@@ -226,7 +258,15 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
                 case R.id.BTNCAMERA1:
 
                         pez = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
-                        startActivityForResult(pez,consta);
+                        startActivityForResult(pez,Toma1);
+
+
+                    break;
+
+                case R.id.BTNCAMERA3:
+
+                    pez = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                    startActivityForResult(pez,Toma2);
 
                     break;
 
@@ -249,13 +289,21 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
                 case R.id.BTN33:
                     finish();
                     break;
-/*
+
                 case R.id.BTNCAMERA2:
                     Intent galleryIntent = new Intent(Intent.ACTION_GET_CONTENT);
                     galleryIntent.setType("image/*");
-                    startActivityForResult(galleryIntent, ACTIVITY_SELECT_IMAGE);
+                    startActivityForResult(galleryIntent, Arch1);
+
                     break;
-                    */
+
+                case R.id.BTNCAMERA4:
+                    Intent galleryIntent2 = new Intent(Intent.ACTION_GET_CONTENT);
+                    galleryIntent2.setType("image/*");
+                    startActivityForResult(galleryIntent2, Arch2);
+
+                    break;
+
             }
 
         }
@@ -264,22 +312,40 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
     protected  void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode,resultCode,data);
 
-        if (requestCode == ACTIVITY_SELECT_IMAGE && resultCode == RESULT_OK) {
-            imaginax = data.getData();
-            BTNCAMERA2.setImageURI(imaginax);
-            BTNCAMERA4.setImageResource(R.drawable.archivito);
-            BTNCAMERA4.setPadding(0,0,0,0);
-            BTNCAMERA4.setAlpha(1f);
+        if (requestCode == Toma1 && resultCode == RESULT_OK  ) {
+           Bundle ext = data.getExtras();
+           bmppp= (Bitmap)ext.get("data");
+           BTNCAMERA1.setImageBitmap(bmppp);
+
+            BTNCAMERA3.setImageResource(R.drawable.camarita);
+            BTNCAMERA3.setPadding(0,0,0,0);
+            BTNCAMERA3.setAlpha(1f);
+            BTNCAMERA3.setOnClickListener(this);
+
 
         }
 
-        if (resultCode== Activity.RESULT_OK && requestCode != ACTIVITY_SELECT_IMAGE ){
+        if (requestCode == Toma2 && resultCode == RESULT_OK ) {
             Bundle ext = data.getExtras();
             bmppp= (Bitmap)ext.get("data");
-           BTNCAMERA1.setImageBitmap(bmppp);
-           BTNCAMERA3.setImageResource(R.drawable.camarita);
-            BTNCAMERA3.setPadding(0,0,0,0);
-            BTNCAMERA3.setAlpha(1f);
+            BTNCAMERA3.setImageBitmap(bmppp);
+
+        }
+
+        if (requestCode == Arch1 && resultCode == RESULT_OK   ){
+            imaginax = data.getData();
+            BTNCAMERA2.setImageURI(imaginax);
+           BTNCAMERA4.setImageResource(R.drawable.archivito);
+            BTNCAMERA4.setPadding(0,0,0,0);
+            BTNCAMERA4.setAlpha(1f);
+            BTNCAMERA4.setOnClickListener(this);
+
+        }
+
+        if (requestCode == Arch2 && resultCode == RESULT_OK  ) {
+            imaginax = data.getData();
+            BTNCAMERA4.setImageURI(imaginax);
+
         }
     }
     private void checkCameraPermission() {

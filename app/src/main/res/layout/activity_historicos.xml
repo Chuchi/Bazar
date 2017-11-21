@@ -95,20 +95,20 @@
 
     <ImageButton
         android:id="@+id/IMBTN114"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_below="@+id/SPNN42"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:adjustViewBounds="false"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/lupinga"/>
+        app:srcCompat="@drawable/lupinga" />
 
     <ImageButton
         android:id="@+id/IMBTN252"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_alignEnd="@+id/TXV43"
         android:layout_alignTop="@+id/IMBTN114"
         android:adjustViewBounds="false"
@@ -116,7 +116,7 @@
         android:onClick="MostrarEscogedorFecha"
         android:scaleType="fitCenter"
 
-        app:srcCompat="@drawable/calendito"/>
+        app:srcCompat="@drawable/calendario" />
 
     <ListView
         android:id="@+id/LV40"
