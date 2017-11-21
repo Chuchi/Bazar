@@ -23,6 +23,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -30,24 +31,23 @@ import android.widget.Toast;
 
 public class reporte extends AppCompatActivity  implements AdapterView.OnItemSelectedListener ,View.OnClickListener{
 
+    private static final int ACTIVITY_SELECT_IMAGE = 1020;
     TextView TXV11, TXV13, TXV14, TXV15, TXV16,TXV17 , TXV20, TXXXX;
     Button BTN22,BTN33;
     EditText EDT1;
     ImageButton BTNCAMERA1 , BTNCAMERA2, BTNCAMERA3 , BTNCAMERA4;
     ImageView BeloAzul;
     ProgressBar progress;
-
-    private static final int ACTIVITY_SELECT_IMAGE = 1020;
-
+    LinearLayout papas;
     Spinner SPNN11, SPNN12,SPNN13, SPNN14;
     ArrayAdapter<String> Colores, Estaciones, Secciones , Areas, Nada;
-    private Handler carlo = new Handler();
-    private Handler tomate = new Handler();
     Intent pez;
     int consta =0;
     Bitmap bmppp;
-    private Uri imaginax;
     SharedPreferences ansiadas;
+    private Handler carlo = new Handler();
+    private Handler tomate = new Handler();
+    private Uri imaginax;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
