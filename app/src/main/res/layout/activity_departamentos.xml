@@ -9,60 +9,66 @@
     tools:context="com.sincro.allup.Departamentos">
 
 
-    <Button
-        android:id="@+id/BTN201"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="25dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/rounded_corner2"
-        android:padding="8dp"
-        android:text="@string/Operaciones"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:visibility="invisible"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/BTN202"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BTN201"
-        android:layout_centerHorizontal="true"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="70dp"
-        android:background="@drawable/rounded_corner2"
-        android:padding="6dp"
-        android:text="@string/Mantenimiento"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="25sp"
-        android:visibility="invisible"/>
+        <Button
+            android:id="@+id/BTN201"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner2"
+            android:padding="8dp"
+            android:text="@string/Operaciones"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+             android:visibility="invisible"/>
 
-    <Button
-        android:id="@+id/BTN204"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
-        android:layout_marginTop="60dp"
-        android:background="@drawable/rounded_corner"
-        android:paddingBottom="3dp"
-        android:paddingEnd="7dp"
-        android:paddingStart="3dp"
-        android:paddingTop="4dp"
-        android:text="@string/Salir"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="35sp"
-        android:textStyle="bold|italic"
-        android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/BTN202"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner2"
+            android:padding="8dp"
+            android:text="@string/Mantenimiento"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:visibility="invisible"/>
+
+        <Button
+            android:id="@+id/BTN204"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginEnd="90dp"
+            android:layout_marginStart="90dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_corner2"
+            android:padding="8dp"
+            android:text="@string/Salir"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="30sp"
+            android:visibility="invisible"/>
+</LinearLayout>
 
     <ImageView
         android:id="@+id/IMV22"

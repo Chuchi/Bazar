@@ -59,20 +59,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TXV40"
-        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="20dp"
         android:text="Linea"
         android:textColor="@android:color/white"
         android:textSize="16sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="83dp"/>
+/>
 
     <TextView
         android:id="@+id/TXV42"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TXV41"
-        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="30dp"
         android:text="Area"
         android:textColor="@android:color/white"
@@ -85,7 +84,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TXV42"
-        android:layout_marginLeft="5dp"
+        android:layout_marginEnd="5dp"
         android:layout_marginTop="30dp"
         android:text="Estado"
         android:textColor="@android:color/white"
@@ -95,28 +94,38 @@
 
     <ImageButton
         android:id="@+id/IMBTN114"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_below="@+id/SPNN42"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignTop="@+id/IMBTN252"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
         android:adjustViewBounds="false"
         android:background="@android:color/transparent"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/lupinga" />
+        app:srcCompat="@drawable/lupinga"/>
 
     <ImageButton
         android:id="@+id/IMBTN252"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_alignEnd="@+id/TXV43"
-        android:layout_alignTop="@+id/IMBTN114"
-        android:adjustViewBounds="false"
-        android:background="@android:color/transparent"
-        android:onClick="MostrarEscogedorFecha"
-        android:scaleType="fitCenter"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
 
-        app:srcCompat="@drawable/calendario" />
+        android:layout_below="@+id/TXV43"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="30dp"
+        android:background="@android:color/transparent"
+        android:scaleType="fitCenter"
+        app:srcCompat="@drawable/calendario"/>
+
+    <ImageButton
+        android:id="@+id/IMBTN253"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/IMBTN252"
+        android:background="@android:color/transparent"
+         android:scaleType="fitCenter"
+        app:srcCompat="@drawable/calendario"/>
 
     <ListView
         android:id="@+id/LV40"
@@ -143,5 +152,30 @@
         android:background="@drawable/rounded_corner"
         android:text="@string/Cancelar"
         android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/TXV51"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/IMBTN252"
+        android:layout_marginStart="5dp"
+        android:layout_toEndOf="@+id/IMBTN252"
+        android:text="Desde"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/TXV52"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@+id/IMBTN252"
+
+        android:layout_marginEnd="5dp"
+        android:layout_toStartOf="@+id/IMBTN253"
+        android:text="Hasta"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"/>
 
 </RelativeLayout>
