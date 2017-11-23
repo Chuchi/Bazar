@@ -2,10 +2,7 @@ package com.sincro.allup;
 
 
 import android.app.DatePickerDialog;
-import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -78,10 +75,36 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
                 finish();
                 break;
             case R.id.IMBTN252:
-                MostrarEscogedorFecha();
+                final Calendar calendar = Calendar.getInstance();
+                int yy = calendar.get(Calendar.YEAR);
+                int mm = calendar.get(Calendar.MONTH);
+                int dd = calendar.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog datePicker = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int año, int mes, int dia) {
+                        String date = String.valueOf(dia) +"-"+String.valueOf(mes)
+                                +"-"+String.valueOf(año);
+                        TXV51.setText(date);
+
+                    }
+                }, yy, mm, dd);
+                datePicker.show();
                 break;
             case R.id.IMBTN253:
-                MostrarEscogedorFecha();
+                final Calendar calendar2 = Calendar.getInstance();
+                int yy2 = calendar2.get(Calendar.YEAR);
+                int mm2 = calendar2.get(Calendar.MONTH);
+                int dd2 = calendar2.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog datePicker2 = new DatePickerDialog(this, new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int año, int mes, int dia) {
+                        String date2 = String.valueOf(dia) +"-"+String.valueOf(mes)
+                                +"-"+String.valueOf(año);
+                        TXV52.setText(date2);
+
+                    }
+                }, yy2, mm2, dd2);
+                datePicker2.show();
                 break;
             case R.id.IMBTN114:
 
@@ -91,41 +114,9 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
     }
 
 
-    public void MostrarEscogedorFecha() {
-        DialogFragment newFragment = new DialogoEscogerFecha();
-        //       newFragment.init(this, this);
-        newFragment.show(getSupportFragmentManager(), "datePicker");
+
     }
 
-
-
-    public static class DialogoEscogerFecha extends DialogFragment implements DatePickerDialog.OnDateSetListener {
-        Context pedro;
-
-        @Override
-        public Dialog onCreateDialog(Bundle savedInstanceState) {
-            // Use the current date as the default date in the picker
-            final Calendar c = Calendar.getInstance();
-            int year = c.get(Calendar.YEAR);
-            int month = c.get(Calendar.MONTH);
-            int day = c.get(Calendar.DAY_OF_MONTH);
-
-            // Create a new instance of DatePickerDialog and return it
-            return new DatePickerDialog(getActivity(), this, year, month, day);
-        }
-
-
-
-        @Override
-        public void onDateSet(DatePicker view, int year, int month, int day) {
-            // Do something with the date chosen by the user
-
-
-    //   ((Activity)view.getContext())(TXV51).setAlpha(0.2f);//
-     //   tormento.setText("tormenta");
-        }
-    }
-}
 
 
 
