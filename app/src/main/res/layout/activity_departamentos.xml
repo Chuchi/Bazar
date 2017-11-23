@@ -9,40 +9,20 @@
     tools:context="com.sincro.allup.Departamentos">
 
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/BTN201"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="57dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="57dp"
-            android:layout_weight="1"
-            android:background="@drawable/rounded_corner"
-            android:padding="5dp"
-            android:text="@string/Operaciones"
-            android:textAlignment="center"
-            android:textColor="@android:color/white"
-            android:textSize="28sp"
-             android:visibility="invisible"/>
+       >
 
 
         <Button
             android:id="@+id/BTN202"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="57dp"
-            android:layout_marginEnd="40dp"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="57dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+
+            android:layout_gravity="center_vertical"
             android:background="@drawable/rounded_corner"
             android:padding="5dp"
             android:text="@string/Mantenimiento"
@@ -52,15 +32,33 @@
             android:visibility="invisible"/>
 
         <Button
+            android:id="@+id/BTN201"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="false"
+            android:layout_marginTop="120dp"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:text="@string/Operaciones"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            android:visibility="invisible"/>
+
+        <Button
             android:id="@+id/BTN204"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="57dp"
-            android:layout_marginEnd="100dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginTop="57dp"
-            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+
+            android:layout_alignWithParentIfMissing="false"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="50dp"
             android:background="@drawable/rounded_corner"
             android:padding="5dp"
             android:text="@string/Salir"
@@ -68,7 +66,7 @@
             android:textColor="@android:color/white"
             android:textSize="28sp"
             android:visibility="invisible"/>
-</LinearLayout>
+    </RelativeLayout>
 
     <ImageView
         android:id="@+id/IMV22"
