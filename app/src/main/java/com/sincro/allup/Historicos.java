@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
@@ -18,13 +19,14 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Historicos extends AppCompatActivity implements View.OnClickListener,AdapterView.OnItemSelectedListener  {
+public class Historicos extends AppCompatActivity implements View.OnClickListener,AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
 
 
     TextView TXV40, TXV41, TXV42, TXV51, TXV52;
     Button BTN41;
     Spinner SPNN40, SPNN41, SPNN43, SPNN42;
     ImageButton IMBTN114, IMBTN252, IMBTN253;
+    ImageView IMV72;
     ListView LV40;
     ArrayAdapter<String> Lines, States, Ares,Selector;
     Handler popo = new Handler();
@@ -42,6 +44,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         TXV42 = (TextView) findViewById(R.id.TXV42);
         TXV51 = (TextView) findViewById(R.id.TXV51);
         TXV52 = (TextView) findViewById(R.id.TXV52);
+        IMV72 = (ImageView)findViewById(R.id.IMV72) ;
 
         LV40 = (ListView) findViewById(R.id.LV40);
 
@@ -62,7 +65,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         IMBTN253.setOnClickListener(this);
         BTN41.setOnClickListener(this);
 
-        LV40.setOnItemSelectedListener( this);
+
 
         Lines = new ArrayAdapter<String>(this, R.layout.stilotexto2, getResources().getStringArray(R.array.Lineaxxx));
         States = new ArrayAdapter<String>(this, R.layout.stilotexto2, getResources().getStringArray(R.array.Estadox));
@@ -73,6 +76,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         SPNN40.setAdapter(Lines);
         SPNN41.setAdapter(Ares);
         SPNN42.setAdapter(States);
+        LV40.setOnItemClickListener( this);
     }
 
     @Override
@@ -121,8 +125,10 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
                 popo.postDelayed(new Runnable() {
                     public void run() {
                         PGSS12.setVisibility(View.INVISIBLE);
-                        LV40.setVisibility(View.VISIBLE);
                         LV40.setAdapter(Selector);
+
+
+
 
                     }
                 }, 3000);
@@ -139,12 +145,16 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        IMV72.setVisibility(View.VISIBLE);
     }
 }
 
