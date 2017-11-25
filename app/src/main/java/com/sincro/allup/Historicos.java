@@ -1,10 +1,13 @@
 package com.sincro.allup;
 
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -19,7 +22,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Historicos extends AppCompatActivity implements View.OnClickListener,AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
+public class Historicos extends AppCompatActivity implements View.OnClickListener,View.OnTouchListener, AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
 
     TextView TXV40, TXV41, TXV42, TXV51, TXV52;
     Button BTN41;
@@ -32,6 +35,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
     ProgressBar PGSS12;
 
 
+    @SuppressLint("ClickableViewAccessibility")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -76,6 +80,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         SPNN41.setAdapter(Ares);
         SPNN42.setAdapter(States);
         LV40.setOnItemClickListener( this);
+        IMV72.setOnTouchListener(this);
     }
 
     @Override
@@ -132,7 +137,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
                     }
                 }, 3000);
 
-                
+
 
 
 
@@ -153,12 +158,63 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-        IMV72.setVisibility(View.VISIBLE);
+        switch (adapterView.getId()) {
+            case R.id.LV40:
+
+                int ordene = LV40.getCheckedItemPosition();
+
+                switch (ordene) {
+                    case 0:
+                        IMV72.setVisibility(View.VISIBLE);
+                        IMV72.setImageResource(R.drawable.dos);
+                        break;
+
+                    case 1:
+                        IMV72.setVisibility(View.VISIBLE);
+                        IMV72.setImageResource(R.drawable.tres);
+                        break;
+
+                    case 2:
+                        IMV72.setVisibility(View.VISIBLE);
+                        IMV72.setImageResource(R.drawable.uno);
+                        break;
+                }
+           break;
+          }
+        }
+
+
+
+    @Override
+    public boolean onTouch(View view, MotionEvent motionEvent) {
+
+        int action = MotionEventCompat.getActionMasked(motionEvent);
+
+        switch (action) {
+            case (MotionEvent.ACTION_DOWN):
+                if (view == IMV72){
+                    IMV72.setImageResource(R.drawable.uno);
+                }
+
+                return true;
+            case (MotionEvent.ACTION_MOVE):
+
+                return true;
+            case (MotionEvent.ACTION_UP):
+                if (view == IMV72){
+                    IMV72.setImageResource(R.drawable.camarita);
+                }
+                return true;
+            case (MotionEvent.ACTION_CANCEL):
+                if (view == IMV72){
+                    IMV72.setImageResource(R.drawable.archivito);
+                }
+                return true;
+            case (MotionEvent.ACTION_OUTSIDE):
+
+                return true;
+            default:
+                return true;
+        }
     }
 }
-
-
-
-
-
-
