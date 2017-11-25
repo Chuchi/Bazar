@@ -1,7 +1,6 @@
 package com.sincro.allup;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
@@ -303,7 +302,6 @@ public class reporte extends AppCompatActivity  implements AdapterView.OnItemSel
                     startActivityForResult(galleryIntent2, Arch2);
 
                     break;
-
             }
 
         }

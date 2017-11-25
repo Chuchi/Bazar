@@ -199,7 +199,7 @@
         android:cropToPadding="false"
         android:elevation="10dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/captur"
+        android:src="@drawable/dos"
         android:visibility="invisible"/>
 
 

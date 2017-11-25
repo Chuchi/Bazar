@@ -21,7 +21,6 @@ import java.util.Calendar;
 
 public class Historicos extends AppCompatActivity implements View.OnClickListener,AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
 
-
     TextView TXV40, TXV41, TXV42, TXV51, TXV52;
     Button BTN41;
     Spinner SPNN40, SPNN41, SPNN43, SPNN42;
