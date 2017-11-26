@@ -5,9 +5,8 @@ import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.view.MotionEvent;
+import android.view.DragEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -22,7 +21,7 @@ import android.widget.TextView;
 
 import java.util.Calendar;
 
-public class Historicos extends AppCompatActivity implements View.OnClickListener,View.OnTouchListener, AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
+public class Historicos extends AppCompatActivity implements View.OnClickListener,View.OnDragListener, AdapterView.OnItemSelectedListener,AdapterView.OnItemClickListener {
 
     TextView TXV40, TXV41, TXV42, TXV51, TXV52;
     Button BTN41;
@@ -33,6 +32,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
     ArrayAdapter<String> Lines, States, Ares,Selector;
     Handler popo = new Handler();
     ProgressBar PGSS12;
+    int fotero =0;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -80,7 +80,7 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         SPNN41.setAdapter(Ares);
         SPNN42.setAdapter(States);
         LV40.setOnItemClickListener( this);
-        IMV72.setOnTouchListener(this);
+        IMV72.setOnDragListener(this);
     }
 
     @Override
@@ -166,17 +166,20 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
                 switch (ordene) {
                     case 0:
                         IMV72.setVisibility(View.VISIBLE);
-                        IMV72.setImageResource(R.drawable.dos);
+                        IMV72.setImageResource(R.drawable.rapazare);
+                        fotero=0;
                         break;
 
                     case 1:
                         IMV72.setVisibility(View.VISIBLE);
-                        IMV72.setImageResource(R.drawable.tres);
+                        IMV72.setImageResource(R.drawable.guidore);
+                        fotero=1;
                         break;
 
                     case 2:
                         IMV72.setVisibility(View.VISIBLE);
-                        IMV72.setImageResource(R.drawable.uno);
+                        IMV72.setImageResource(R.drawable.barunire);
+                        fotero=2;
                         break;
                 }
            break;
@@ -184,37 +187,73 @@ public class Historicos extends AppCompatActivity implements View.OnClickListene
         }
 
 
-
     @Override
-    public boolean onTouch(View view, MotionEvent motionEvent) {
+    public boolean onDrag(View view, DragEvent dragEvent) {
+        switch(dragEvent.getAction())
+        {
+            case DragEvent.ACTION_DRAG_STARTED:
 
-        int action = MotionEventCompat.getActionMasked(motionEvent);
+                // Do nothing
+                break;
 
-        switch (action) {
-            case (MotionEvent.ACTION_DOWN):
-                if (view == IMV72){
-                    IMV72.setImageResource(R.drawable.uno);
+            case DragEvent.ACTION_DRAG_ENTERED:
+
+                break;
+
+            case DragEvent.ACTION_DRAG_EXITED :
+                switch(fotero){
+                    case 0:
+                        IMV72.setImageResource(R.drawable.guidore);
+                        fotero ++;
+                        break;
+                    case 1:
+                        IMV72.setImageResource(R.drawable.barunire);
+                        fotero ++;
+                        break;
+                    case 2:
+                        IMV72.setImageResource(R.drawable.rapazare);
+                        fotero =0;
+                        break;
+                    default: break;
+
                 }
 
-                return true;
-            case (MotionEvent.ACTION_MOVE):
 
-                return true;
-            case (MotionEvent.ACTION_UP):
-                if (view == IMV72){
-                    IMV72.setImageResource(R.drawable.camarita);
-                }
-                return true;
-            case (MotionEvent.ACTION_CANCEL):
-                if (view == IMV72){
-                    IMV72.setImageResource(R.drawable.archivito);
-                }
-                return true;
-            case (MotionEvent.ACTION_OUTSIDE):
+                break;
 
-                return true;
-            default:
-                return true;
+            case DragEvent.ACTION_DRAG_LOCATION  :
+
+                break;
+
+            case DragEvent.ACTION_DRAG_ENDED   :
+                switch(fotero){
+                    case 0:
+                        IMV72.setImageResource(R.drawable.guidore);
+                        fotero ++;
+                        break;
+                    case 1:
+                        IMV72.setImageResource(R.drawable.barunire);
+                        fotero ++;
+                        break;
+                    case 2:
+                        IMV72.setImageResource(R.drawable.rapazare);
+                        fotero =0;
+                        break;
+                    default: break;
+
+                }
+
+                // Do nothing
+                break;
+
+            case DragEvent.ACTION_DROP:
+
+                // Do nothing
+                break;
+            default: break;
         }
+
+
+        return false;
     }
 }

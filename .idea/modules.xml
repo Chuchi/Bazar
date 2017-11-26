@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AllUp.iml" filepath="$PROJECT_DIR$/AllUp.iml" />
+      <module fileurl="file://D:\Emaus\Garage\AllUp.iml" filepath="D:\Emaus\Garage\AllUp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Garage.iml" filepath="$PROJECT_DIR$/Garage.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
