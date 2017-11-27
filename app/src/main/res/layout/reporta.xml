@@ -29,6 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignEnd="@id/RLL11"
+        android:layout_alignTop="@+id/TXV11"
         android:layout_alignWithParentIfMissing="false"
         android:layout_below="@id/TXV36"
         android:layout_marginEnd="6dp"
@@ -36,7 +37,7 @@
         android:textAlignment="center"
         android:textColor="@color/Amarillo"
         android:textSize="40sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"/>
 
 
     <TextView
@@ -48,7 +49,8 @@
         android:layout_alignStart="@+id/TXV20"
         android:layout_weight="1"
         android:text="Reporte"
-        android:textSize="10sp" />
+        android:textAlignment="center"
+        android:textSize="10sp"/>
 
     <LinearLayout
         android:id="@+id/RLL11"
@@ -223,7 +225,7 @@
                 android:id="@+id/BTNCAMERA1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
@@ -235,7 +237,7 @@
                 android:id="@+id/BTNCAMERA2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
@@ -256,7 +258,7 @@
                 android:id="@+id/BTNCAMERA3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
@@ -267,7 +269,7 @@
                 android:id="@+id/BTNCAMERA4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:adjustViewBounds="true"
                 android:background="@android:color/transparent"
